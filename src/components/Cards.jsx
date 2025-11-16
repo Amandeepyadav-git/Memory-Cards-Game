@@ -1,11 +1,14 @@
-import React,{props} from 'react'
+import React,{useState} from 'react'
 
-const Cards = ({Imgsrc,index}) => {
+const Cards = ({Imgsrc,index, play},props) => {
 
+
+  const [childValue, setChildValue] = useState(play);
+  console.log(play);
 
   return (
     <>
-    <div className="h-[25vh] bg-cover bg-white w-[10vw] text-red">
+    <div className="h-[25vh] bg-cover bg-white w-[10vw] rounded-3xl text-red">
     <img src={Imgsrc} key={index} alt="Hero image" className="w-full h-64 object-cover rounded-xl" />      
     </div>
     </>
