@@ -1,10 +1,6 @@
 import React,{useState} from 'react'
 
-const Cards = ({Imgsrc,index, play},props) => {
-
-
-  const [childValue, setChildValue] = useState(play);
-  console.log(play);
+const Cards = ({Imgsrc,index},props) => {
 
   return (
     <>
