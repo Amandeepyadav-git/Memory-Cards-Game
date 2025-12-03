@@ -27,36 +27,58 @@ import Flip from "./assets/Flip.png";
 import bg from "./assets/bg.jpg";
 
 import Navbar from "./components/Navbar";
+import Guessimg from "./Views/Guessimg";
 
-function App() {
+function App(props) {
 
-const [imgArr, setImgArr] = useState([
+ const imgArr = [
   A1, A2, A3, A4, 
   J1, J2, J3, J4, 
   K1, K2, K3, K4, 
   Q1, Q2, Q3, Q4
-]);
+];
 
 const shuffleArray = (arr) => {
   const newArr = [...arr]; 
   // Copy to avoid mutating state
   for (let i = newArr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [newArr[i], newArr[j]] = [newArr[j], newArr[i]]; // Swap
+     [newArr[i], newArr[j]] = [newArr[j], newArr[i]]; // Swap
   }
+
   return newArr;
 };
+
+/*
+imgArr = [
+A1,A2,A3,A4,
+J1,J2,J3,J4,
+K1,K2,K3,K4,
+Q1,Q2,Q3,Q4,
+];
+  const newArr = [];
+
+  while(imgArr.length>0){
+    const randomIndex = Math.floor(Math.random()*imgArr.length);
+
+    const selected = imgArr.splice(randomIndex, 1)[0]
+    newArr.push(selected);
+  }
+  
+  console.log(newArr[1]);
+*/
 
 const newArr = shuffleArray(imgArr);
 
   //for game on-off button
   const [play, setPlay] = useState(false);
-
+  const [even, setEven] = useState(0)
   return (
     <>
       <div className="h-screen w-screen bg-amber-100 flex flex-col">
         <div className="upperBox w-screen h-[10vh] bg-[#690404]">
           <Navbar
+          newArr={newArr}
             play={play}
             onPlayChange={setPlay}
             Newgame={() => {
@@ -68,11 +90,8 @@ const newArr = shuffleArray(imgArr);
           style={{ backgroundImage: `url(${bg})` }}
         >
           <div className="l1 flex flex-row pl-5 pt-5 pr-5 justify-evenly">
-            <Cards Imgsrc={!play ? Flip : newArr[0]}
-            />
-             {console.log(newArr[1])}
+            <Cards Imgsrc={!play ? Flip : newArr[0]}/>
             <Cards Imgsrc={!play ? Flip : newArr[1]} />
-           
             <Cards Imgsrc={!play ? Flip :  newArr[2]} />
             <Cards Imgsrc={!play ? Flip : newArr[3]} />
           </div>
@@ -89,6 +108,7 @@ const newArr = shuffleArray(imgArr);
             <Cards Imgsrc={!play ? Flip :newArr[11]} />
           </div>
         </div>
+        <Guessimg/>
       </div>
     </>
   );
