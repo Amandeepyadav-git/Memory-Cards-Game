@@ -50,6 +50,7 @@ const shuffleArray = (arr) => {
 };
 
 /*
+this loop function is made by me
 imgArr = [
 A1,A2,A3,A4,
 J1,J2,J3,J4,
