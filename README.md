@@ -12,11 +12,11 @@
 
 3- "npm run dev"
 
+4- "nstall tailwindcss"
 
-4-Copy the link from the terminal,
+5-Copy the link from the terminal,
 
-
-5- And all set to go 
+6- And all set to go 
 
 
 
@@ -35,6 +35,6 @@
 
     -make a let's play button,
 
+    - on every start click, side image becomes bigger before all the images are shown on the screen
+
     - next step to be updated soon...
-
-

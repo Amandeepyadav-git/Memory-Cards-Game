@@ -1,0 +1,30 @@
+{
+  "name": "memory-cards-game",
+  "version": "1.0.0",
+  "description": "1- npm init",
+  "homepage": "https://github.com/Amandeepyadav-git/Memory-Cards-Game#readme",
+  "bugs": {
+    "url": "https://github.com/Amandeepyadav-git/Memory-Cards-Game/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amandeepyadav-git/Memory-Cards-Game.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "eslint.config.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@vitejs/plugin-react": "^5.1.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.3.1"
+  }
+}

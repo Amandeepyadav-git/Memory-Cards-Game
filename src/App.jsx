@@ -49,31 +49,11 @@ const shuffleArray = (arr) => {
   return newArr;
 };
 
-/*
-this loop function is made by menodemo
-imgArr = [
-A1,A2,A3,A4,
-J1,J2,J3,J4,
-K1,K2,K3,K4,
-Q1,Q2,Q3,Q4,
-];
-  const newArr = [];
-
-  while(imgArr.length>0){
-    const randomIndex = Math.floor(Math.random()*imgArr.length);
-
-    const selected = imgArr.splice(randomIndex, 1)[0]
-    newArr.push(selected);
-  }
-  
-  console.log(newArr[1]);
-*/
-
 const newArr = shuffleArray(imgArr);
 
   //for game on-off button
   const [play, setPlay] = useState(false);
-  const [even, setEven] = useState(0)
+  const [even, setEven] = useState(0);
   return (
     <>
       <div className="h-screen w-screen bg-amber-100 flex flex-col">
